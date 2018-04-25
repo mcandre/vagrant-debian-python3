@@ -2,12 +2,13 @@
 
 # VAGRANT CLOUD
 
-https://app.vagrantup.com/mcandre/boxes/vagrant-debian-python3
+* https://app.vagrantup.com/mcandre/boxes/vagrant-debian-python3-amd64
+* https://app.vagrantup.com/mcandre/boxes/vagrant-debian-python3-i386
 
 # EXAMPLE
 
 ```console
-$ cd test
+$ cd amd64/test
 $ vagrant up
 $ vagrant ssh -c "cd /vagrant && python3 hello.py"
 Hello World!
@@ -31,5 +32,6 @@ Hello World!
 # EXPORT
 
 ```console
-$ make vagrant-debian-python3.box
+$ sh -c "cd amd64 && make vagrant-debian-python3-amd64.box"
+$ sh -c "cd i386 && make vagrant-debian-python3-i386.box"
 ```
